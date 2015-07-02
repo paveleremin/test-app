@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test app</title>
+
+	<base href="/">
+
+	<!-- build:css(.tmp) styles/main.css -->
+	<link href="_configuration/main.less" rel="stylesheet/less" type="text/css">
+	<!-- endbuild -->
+</head>
+<body ng-app="testApp">
+
+    <div id="page">
+
+        <div ng-controller="HeaderCtrl as ctrl" ng-include="'header/header.html'"></div>
+
+        <div id="content">
+            <div class="container" ui-view></div>
+        </div>
+
+    </div>
+    <div ng-include="'footer/footer.html'"></div>
+
+    <!-- build:dev dev-only.file -->
+    <script src="../bower_components/less/dist/less.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- angularJS + libraries -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/script.js -->
+    <!-- configuration -->
+    <script src="_configuration/configs.js"></script>
+    <script src="_configuration/services.js"></script>
+    <script src="_configuration/current-user.js"></script>
+    <script src="_configuration/app.js"></script>
+    <!-- header -->
+    <script src="header/header-controller.js"></script>
+    <!-- login-logout -->
+    <script src="login/login-controller.js"></script>
+    <script src="login/logout-controller.js"></script>
+    <!-- signup -->
+    <script src="signup/signup-controller.js"></script>
+    <script src="signup/signup-directive.js"></script>
+    <!-- search -->
+    <script src="search/search-controller.js"></script>
+    <script src="search/search-directive.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>

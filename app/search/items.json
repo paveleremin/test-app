@@ -1,0 +1,55 @@
+[{
+  "id": 1,
+  "name": "Item #1",
+  "color": "Red",
+  "issue": "2015-02-01",
+  "price": 1.1,
+  "rating": 1.1,
+  "inStock": 1,
+  "image": "http://fakeimg.pl/100/"
+}, {
+  "id": 2,
+  "name": "Item #2",
+  "color": "White",
+  "issue": "2015-02-02",
+  "price": 2.2,
+  "rating": 2.2,
+  "inStock": 0,
+  "image": "http://fakeimg.pl/100/"
+}, {
+  "id": 3,
+  "name": "Item #3",
+  "color": "Black",
+  "issue": "2015-02-03",
+  "price": 3.3,
+  "rating": 3.3,
+  "inStock": 1,
+  "image": "http://fakeimg.pl/100/"
+}, {
+  "id": 4,
+  "name": "Item #4",
+  "color": "Blue",
+  "issue": "2015-02-04",
+  "price": 4.4,
+  "rating": 4.4,
+  "inStock": 0,
+  "image": "http://fakeimg.pl/100/"
+}, {
+  "id": 5,
+  "name": "Item #5",
+  "color": "Yellow",
+  "issue": "2015-02-05",
+  "price": 5.5,
+  "rating": 5,
+  "inStock": 1,
+  "image": "http://fakeimg.pl/100/"
+},{
+  "id": 6,
+  "name": "Item #6",
+  "color": "Green",
+  "issue": "2015-02-06",
+  "price": 6.6,
+  "rating": 0,
+  "inStock": 1,
+  "image": "http://fakeimg.pl/100/"
+}]

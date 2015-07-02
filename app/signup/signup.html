@@ -1,0 +1,73 @@
+<p class="visible-lg visible-md visible-sm">&nbsp;</p>
+<p class="visible-lg visible-md">&nbsp;</p>
+<p class="visible-lg">&nbsp;</p>
+
+<div class="row">
+    <div class="col-md-offset-4 col-md-4">
+
+        <div class="fade" ng-class="{in:ctrl.error}">
+            <div class="alert alert-danger">{{ ctrl.error || '&nbsp;' }}</div>
+        </div>
+
+        <form name="form" ng-submit="ctrl.onSubmit()" novalidate>
+            <div class="form-group" ng-class="{'has-error':form.email.$invalid && !form.email.$pristine}">
+                <label for="email">
+                    Email
+                </label>
+                <input
+                    ng-focus-if="1"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    ng-model="ctrl.data.email"
+                    required
+                    type="email">
+            </div>
+
+            <div class="form-group" ng-class="{'has-error':form.password.$invalid && !form.password.$pristine}">
+                <label for="password">
+                    Password
+                </label>
+                <input
+                    class="form-control"
+                    name="password"
+                    id="password"
+                    ng-model="ctrl.data.password"
+                    required
+                    type="password">
+            </div>
+
+            <div class="form-group" ng-class="{'has-error':form.password_confirm.$invalid && !form.password_confirm.$pristine}">
+                <label for="password_confirm">
+                    Confim Password
+                </label>
+                <input
+                    ng-match="ctrl.data.password"
+                    class="form-control"
+                    name="password_confirm"
+                    id="password_confirm"
+                    ng-model="ctrl.password_confirm"
+                    required
+                    type="password">
+            </div>
+
+            <button
+                ng-disabled="form.$invalid"
+                class="btn btn-primary btn-block"
+                type="submit">
+                Sign Up
+            </button>
+
+        </form>
+
+        <div class="line-or">
+            <hr>
+            <div>or</div>
+        </div>
+
+        <a ui-sref="login" class="btn btn-link btn-block">
+            Sign In
+        </a>
+
+    </div>
+</div>

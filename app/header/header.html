@@ -1,0 +1,49 @@
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">
+                Test app
+            </a>
+        </div>
+
+        <div class="navbar-collapse collapse if-else-block" ng-class="{if:ctrl.isLoggedIn()}">
+            <div class="if">
+                <ul class="nav navbar-nav">
+                    <li ui-sref-active="active">
+                        <a ui-sref="search">Search</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            Cart:
+                            {{ ctrl.numItems }} items
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="logout">
+                            <span class="glyphicon glyphicon-log-out"></span>
+                            Log Out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="else">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ui-sref-active="active">
+                        <a ui-sref="login">
+                            <span class="glyphicon glyphicon-log-in"></span>
+                            Sign In
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="signup">
+                            <span class="glyphicon glyphicon-user"></span>
+                            Sign Up
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

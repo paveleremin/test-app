@@ -1,0 +1,118 @@
+<div class="row">
+    <div class="col-sm-4">
+        <label for="issueFrom">Issue from:</label>
+        <label for="issueFrom" class="input-group">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            <input
+                id="issueFrom"
+                ng-model="ctrl.filter.issueFrom"
+                class="form-control"
+                type="text">
+        </label>
+    </div>
+    <div class="col-sm-4">
+        <label for="issueTo">Issue to:</label>
+        <label for="issueTo" class="input-group">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            <input
+                id="issueTo"
+                ng-model="ctrl.filter.issueTo"
+                class="form-control"
+                type="text">
+        </label>
+    </div>
+    <div class="col-sm-4">
+        <label for="inStock">In stock only:</label>
+        <div>
+            <input
+                id="inStock"
+                ng-model="ctrl.filter.inStock"
+                type="checkbox">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <label for="priceFrom">Price from:</label>
+        <div>
+            <input
+                id="priceFrom"
+                ng-model="ctrl.filter.priceFrom"
+                class="form-control"
+                type="text">
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <label for="priceTo">Price to:</label>
+        <div>
+            <input
+                id="priceTo"
+                ng-model="ctrl.filter.priceTo"
+                class="form-control"
+                type="text">
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <label for="color">Color:</label>
+        <div>
+            <select
+                id="color"
+                ng-model="ctrl.filter.color"
+                ng-options="color as color for color in ctrl.colors"
+                class="form-control">
+            </select>
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+<div class="row" ng-repeat="item in ctrl.items | filter:ctrl.itemsFilter track by item.id">
+    <div class="col-xs-3">
+        <img class="img-responsive" ng-src="{{item.image}}" alt="">
+    </div>
+    <div class="col-xs-9">
+        <div class="row">
+            <div class="col-xs-4">
+                {{ item.name }}
+            </div>
+            <div class="col-xs-4">
+                {{ item.issue }}
+            </div>
+            <div class="col-xs-4">
+                {{ item.price }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <span ng-style="{color:item.color}">
+                    {{ item.color }}
+                </span>
+            </div>
+            <div class="col-xs-4">
+                {{ item.inStock ? 'In stock' : 'Not in stock' }}
+            </div>
+            <div class="col-xs-4">
+                <button
+                    ng-click="ctrl.addToCart(item)"
+                    class="btn btn-primary"
+                    type="button">
+                    Order
+                </button>
+            </div>
+        </div>
+        <div>
+            <div item-rating item="item"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
