@@ -9,6 +9,7 @@
                 id="issueFrom"
                 ng-model="ctrl.filter.issueFrom"
                 class="form-control"
+                placeholder="2015-02-01"
                 type="text">
         </label>
     </div>
@@ -22,6 +23,7 @@
                 id="issueTo"
                 ng-model="ctrl.filter.issueTo"
                 class="form-control"
+                placeholder="2015-02-06"
                 type="text">
         </label>
     </div>
@@ -65,6 +67,7 @@
                 ng-model="ctrl.filter.color"
                 ng-options="color as color for color in ctrl.colors"
                 class="form-control">
+                <option value="">- Any -</option>
             </select>
         </div>
     </div>
